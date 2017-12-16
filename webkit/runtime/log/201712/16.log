@@ -515,3 +515,152 @@
 [ info ] [ LOG ] INIT File
 
 ---------------------------------------------------------------
+[ 2017-12-16T15:52:10+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php?s=index/user/register
+[ log ] o2o.ding.com/index.php?s=index/user/register [运行时间：0.034313s][吞吐率：29.14req/s] [内存消耗：1,377.77kb] [文件加载：32]
+[ info ] [ LANG ] D:\phpStudy\WWW\my project\webkit\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'register',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'o2o.ding.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=6657261568',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\User->register[ D:\phpStudy\WWW\my project\webkit\application\index\controller\User.php ]
+[ info ] [ VIEW ] D:\phpStudy\WWW\my project\webkit\public/../application/index\view\user\register.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-12-16T15:52:23+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php?s=admin
+[ log ] o2o.ding.com/index.php?s=admin [运行时间：0.036613s][吞吐率：27.31req/s] [内存消耗：1,547.98kb] [文件加载：36]
+[ info ] [ LANG ] D:\phpStudy\WWW\my project\webkit\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'o2o.ding.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=6657261568',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Index->index[ D:\phpStudy\WWW\my project\webkit\application\admin\controller\Index.php ]
+[ info ] [ VIEW ] D:\phpStudy\WWW\my project\webkit\public/../application/admin\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-12-16T15:57:20+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php?s=admin
+[ log ] o2o.ding.com/index.php?s=admin [运行时间：0.131706s][吞吐率：7.59req/s] [内存消耗：1,137.65kb] [文件加载：30]
+[ info ] [ LANG ] D:\phpStudy\WWW\my project\webkit\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'o2o.ding.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=6657261568; Huiskin=default',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [4]语法错误: unexpected '}'[D:\phpStudy\WWW\my project\webkit\application\admin\controller\Index.php:14]
+
+---------------------------------------------------------------
+[ 2017-12-16T15:57:37+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php?s=admin
+[ log ] o2o.ding.com/index.php?s=admin [运行时间：0.062437s][吞吐率：16.02req/s] [内存消耗：1,617.66kb] [文件加载：37]
+[ info ] [ LANG ] D:\phpStudy\WWW\my project\webkit\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'o2o.ding.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=6657261568; Huiskin=default',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Index->index[ D:\phpStudy\WWW\my project\webkit\application\admin\controller\Index.php ]
+[ info ] [ VIEW ] D:\phpStudy\WWW\my project\webkit\public/../application/admin\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-12-16T15:57:37+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/admin/index/welcome.html
+[ log ] o2o.ding.com/index.php/admin/index/welcome.html [运行时间：0.032644s][吞吐率：30.63req/s] [内存消耗：1,378.52kb] [文件加载：33]
+[ info ] [ LANG ] D:\phpStudy\WWW\my project\webkit\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'welcome',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'o2o.ding.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://o2o.ding.com/index.php?s=admin',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=6657261568; Huiskin=default',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Index->welcome[ D:\phpStudy\WWW\my project\webkit\application\admin\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
