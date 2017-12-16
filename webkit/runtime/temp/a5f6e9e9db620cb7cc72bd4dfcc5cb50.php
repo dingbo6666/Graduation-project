@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:83:"D:\phpStudy\WWW\my project\webkit\public/../application/index\view\index\index.html";i:1513330541;s:83:"D:\phpStudy\WWW\my project\webkit\public/../application/index\view\public\head.html";i:1513330416;s:82:"D:\phpStudy\WWW\my project\webkit\public/../application/index\view\public\nav.html";i:1513330454;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:83:"D:\phpStudy\WWW\my project\webkit\public/../application/index\view\index\index.html";i:1513330589;s:83:"D:\phpStudy\WWW\my project\webkit\public/../application/index\view\public\head.html";i:1513391380;s:82:"D:\phpStudy\WWW\my project\webkit\public/../application/index\view\public\nav.html";i:1513330454;}*/ ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -11,9 +11,9 @@
     <link rel="stylesheet" href="/static/index/css/base.css" />
     <link rel="stylesheet" href="/static/index/css/common.css" />
     <link rel="stylesheet" href="/static/index/css/index.css" />
-    <script type="text/javascript" src="js/html5shiv.js"></script>
-    <script type="text/javascript" src="js/respond.min.js"></script>
-    <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="/static/index/js/html5shiv.js"></script>
+    <script type="text/javascript" src="/static/index/js/respond.min.js"></script>
+    <script type="text/javascript" src="/static/index/js/jquery-1.11.3.min.js"></script>
 </head>
 <body>
     <div class="header-bar">
@@ -38,7 +38,6 @@
             </ul>
         </div>
     </div>
-
 <div class="search">
     <img src="/static/index/image/logo.png" />
 
