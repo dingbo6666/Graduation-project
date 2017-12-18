@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:83:"D:\phpStudy\WWW\my project\webkit\public/../application/admin\view\index\index.html";i:1513410940;s:85:"D:\phpStudy\WWW\my project\webkit\public/../application/admin\view\public\header.html";i:1513410000;s:83:"D:\phpStudy\WWW\my project\webkit\public/../application/admin\view\public\menu.html";i:1513410112;s:85:"D:\phpStudy\WWW\my project\webkit\public/../application/admin\view\public\footer.html";i:1513409902;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:83:"D:\phpStudy\WWW\my project\webkit\public/../application/admin\view\index\index.html";i:1513410940;s:85:"D:\phpStudy\WWW\my project\webkit\public/../application/admin\view\public\header.html";i:1513410000;s:83:"D:\phpStudy\WWW\my project\webkit\public/../application/admin\view\public\menu.html";i:1513477189;s:85:"D:\phpStudy\WWW\my project\webkit\public/../application/admin\view\public\footer.html";i:1513478262;}*/ ?>
 ﻿<!--包含头部文件-->
 <!DOCTYPE HTML>
 <html>
@@ -69,7 +69,7 @@
 			<dt><i class="Hui-iconfont">&#xe616;</i> 分类管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
 			<dd>
 				<ul>
-					<li><a _href="请添加链接" data-title="种类分类" href="javascript:void(0)">种类分类</a></li>
+					<li><a _href="<?php echo url('category/index'); ?>" data-title="种类分类" href="javascript:void(0)">种类分类</a></li>
 				</ul>
 			</dd>
 		</dl>
@@ -161,6 +161,5 @@
 <script type="text/javascript" src="__STATIC__/admin/hui/lib/jquery.validation/1.14.0/messages_zh.min.js"></script>
 <script type="text/javascript" src="__STATIC__/admin/hui/static/h-ui/js/H-ui.js"></script>
 <script type="text/javascript" src="__STATIC__/admin/hui/static/h-ui.admin/js/H-ui.admin.js"></script>
-</body>
-</html> 
+<script type="text/javascript" src="__STATIC__/admin/js/common.js"></script>
 
