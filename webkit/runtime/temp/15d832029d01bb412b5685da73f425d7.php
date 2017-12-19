@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:83:"D:\phpStudy\WWW\my project\webkit\public/../application/admin\view\index\index.html";i:1513410940;s:85:"D:\phpStudy\WWW\my project\webkit\public/../application/admin\view\public\header.html";i:1513410000;s:83:"D:\phpStudy\WWW\my project\webkit\public/../application/admin\view\public\menu.html";i:1513477189;s:85:"D:\phpStudy\WWW\my project\webkit\public/../application/admin\view\public\footer.html";i:1513478262;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:83:"D:\phpStudy\WWW\my project\webkit\public/../application/admin\view\index\index.html";i:1513410940;s:85:"D:\phpStudy\WWW\my project\webkit\public/../application/admin\view\public\header.html";i:1513679852;s:83:"D:\phpStudy\WWW\my project\webkit\public/../application/admin\view\public\menu.html";i:1513477189;s:85:"D:\phpStudy\WWW\my project\webkit\public/../application/admin\view\public\footer.html";i:1513478262;}*/ ?>
 ﻿<!--包含头部文件-->
 <!DOCTYPE HTML>
 <html>
@@ -21,6 +21,7 @@
 <link rel="stylesheet" type="text/css" href="__STATIC__/admin/hui/lib/icheck/icheck.css" />
 <link rel="stylesheet" type="text/css" href="__STATIC__/admin/hui/static/h-ui.admin/skin/default/skin.css" id="skin" />
 <link rel="stylesheet" type="text/css" href="__STATIC__/admin/hui/static/h-ui.admin/css/style.css" />
+<link rel="stylesheet" type="text/css" href="__STATIC__/admin/css/common.css" />
 <!--[if IE 6]>
 <script type="text/javascript" src="http://lib.h-ui.net/DD_belatedPNG_0.0.8a-min.js" ></script>
 <script>DD_belatedPNG.fix('*');</script>

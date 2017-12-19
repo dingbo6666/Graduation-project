@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:86:"D:\phpStudy\WWW\my project\webkit\public/../application/admin\view\category\index.html";i:1513478414;s:85:"D:\phpStudy\WWW\my project\webkit\public/../application/admin\view\public\header.html";i:1513410000;s:85:"D:\phpStudy\WWW\my project\webkit\public/../application/admin\view\public\footer.html";i:1513478262;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:86:"D:\phpStudy\WWW\my project\webkit\public/../application/admin\view\category\index.html";i:1513680528;s:85:"D:\phpStudy\WWW\my project\webkit\public/../application/admin\view\public\header.html";i:1513679852;s:85:"D:\phpStudy\WWW\my project\webkit\public/../application/admin\view\public\footer.html";i:1513478262;}*/ ?>
 <!--包含头部文件-->
 <!DOCTYPE HTML>
 <html>
@@ -21,6 +21,7 @@
 <link rel="stylesheet" type="text/css" href="__STATIC__/admin/hui/lib/icheck/icheck.css" />
 <link rel="stylesheet" type="text/css" href="__STATIC__/admin/hui/static/h-ui.admin/skin/default/skin.css" id="skin" />
 <link rel="stylesheet" type="text/css" href="__STATIC__/admin/hui/static/h-ui.admin/css/style.css" />
+<link rel="stylesheet" type="text/css" href="__STATIC__/admin/css/common.css" />
 <!--[if IE 6]>
 <script type="text/javascript" src="http://lib.h-ui.net/DD_belatedPNG_0.0.8a-min.js" ></script>
 <script>DD_belatedPNG.fix('*');</script>
@@ -34,7 +35,7 @@
 <nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 分类管理 <span class="c-gray en">&gt;</span> 分类列表 <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont">&#xe68f;</i></a></nav>
 <div class="page-container">
 
-	<div class="cl pd-5 bg-1 bk-gray mt-20"> <span class="l"> <a class="btn btn-primary radius" onclick="o2o_s_edit('添加生活服务分类','<?php echo url('category/add'); ?>','','300')" href="javascript:;"><i class="Hui-iconfont">&#xe600;</i> 添加分类</a></span> <span class="r"></span> </div>
+	<div class="cl pd-5 bg-1 bk-gray mt-20"> <span class="l"> <a class="btn btn-primary radius" onclick="o2o_s_edit('添加分类','<?php echo url('category/add'); ?>','','300')" href="javascript:;"><i class="Hui-iconfont">&#xe600;</i> 添加分类</a></span> <span class="r"></span> </div>
 	<div class="mt-20">
 		<table class="table table-border table-bordered table-bg table-hover table-sort">
 			<thead>
@@ -49,20 +50,23 @@
 				</tr>
 			</thead>
 			<tbody>
-
+					<?php if(is_array($categorys) || $categorys instanceof \think\Collection): $i = 0; $__LIST__ = $categorys;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
 				<tr class="text-c">
 					<td><input name="" type="checkbox" value=""></td>
-					<td></td>
-					<td></td>
-					<td class="text-c"></td>
-					<td></td>
-					<td class="td-status"><a href="" title="点击修改状态"></a></td>
-					<td class="td-manage"><a href="">获取子栏目</a><a style="text-decoration:none" class="ml-5" onClick="o2o_s_edit('编辑','','',300)" href="javascript:;" title="编辑"><i class="Hui-iconfont">&#xe6df;</i></a> <a style="text-decoration:none" class="ml-5" onClick="o2o_del('','')" href="javascript:;" title="删除"><i class="Hui-iconfont">&#xe6e2;</i></a></td>
+					<td><?php echo $vo['id']; ?></td>
+					<td><?php echo $vo['name']; ?></td>
+					<td class="text-c"><?php echo $vo['listorder']; ?></td>
+					<td><?php echo date("y-m-d h:i",$vo['create_time']); ?></td>
+					<td class="td-status"><a href="" title="点击修改状态"><?php echo status($vo['status']); ?></a></td>
+					<td class="td-manage"><a href="<?php echo url('category/index',['parent_id'=>$vo['id']]); ?>">获取子栏目</a><a style="text-decoration:none" class="ml-5" onClick="o2o_s_edit('编辑','','',300)" href="javascript:;" title="编辑"><i class="Hui-iconfont">&#xe6df;</i></a> <a style="text-decoration:none" class="ml-5" onClick="o2o_del('','')" href="javascript:;" title="删除"><i class="Hui-iconfont">&#xe6e2;</i></a></td>
 				</tr>
-
+				<?php endforeach; endif; else: echo "" ;endif; ?>
 			</tbody>
 		</table>
 	</div>
+</div>
+<div class="cl pd-5 bg-1 bk-gray mt-20 tp5-o2o">
+	<?php echo $categorys->render(); ?>
 </div>
 <!--包含头部文件-->
 <script type="text/javascript" src="__STATIC__/admin/hui/lib/jquery/1.9.1/jquery.min.js"></script>
