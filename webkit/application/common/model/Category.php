@@ -29,11 +29,12 @@ class Category extends Model
       'status'=>['neq',-1],
     ];
     $order=[
+      'listorder'=>'desc',
       'id'=>'desc',
     ];
      $result = $this->where($data)
     ->order($order)
-    ->paginate(2);
+    ->paginate();
     //echo $this->getLastSql();
     return $result;
   }

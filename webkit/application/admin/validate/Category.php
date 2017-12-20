@@ -10,7 +10,7 @@ class Category extends Validate{
     ['listorder','number'],
   ];
   protected $scene =[
-    'add'=>['name','parent_id'],
+    'add'=>['name','parent_id','id'],
     'listorder'=>['id','listorder'],
   ];
 }
