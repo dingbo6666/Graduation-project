@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:86:"D:\phpStudy\WWW\my project\webkit\public/../application/admin\view\category\index.html";i:1513764448;s:85:"D:\phpStudy\WWW\my project\webkit\public/../application/admin\view\public\header.html";i:1513679852;s:85:"D:\phpStudy\WWW\my project\webkit\public/../application/admin\view\public\footer.html";i:1513478262;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:86:"D:\phpStudy\WWW\my project\webkit\public/../application/admin\view\category\index.html";i:1513845151;s:85:"D:\phpStudy\WWW\my project\webkit\public/../application/admin\view\public\header.html";i:1513679852;s:85:"D:\phpStudy\WWW\my project\webkit\public/../application/admin\view\public\footer.html";i:1513478262;}*/ ?>
 <!--包含头部文件-->
 <!DOCTYPE HTML>
 <html>
@@ -57,10 +57,11 @@
 					<td><?php echo $vo['name']; ?></td>
 					<td class="text-c listorder"><input size="3" attr-id="<?php echo $vo['id']; ?>" name="listorder" value="<?php echo $vo['listorder']; ?>"/></td>
 					<td><?php echo date("y-m-d h:i",$vo['create_time']); ?></td>
-					<td class="td-status"><a href="" title="点击修改状态"><?php echo status($vo['status']); ?></a></td>
+					<td class="td-status"><a href="<?php echo url('category/status',['id'=>$vo['id'],'status'=>$vo['status']==1?0:1]); ?>" title="点击修改状态"><?php echo status($vo['status']); ?></a></td>
 					<td class="td-manage"><a href="<?php echo url('category/index',['parent_id'=>$vo['id']]); ?>">获取子栏目</a>
 						<a style="text-decoration:none" class="ml-5" onClick="o2o_s_edit('编辑','<?php echo url('category/edit',['id'=>$vo['id']]); ?>','',300)" href="javascript:;" title="编辑">
-							<i class="Hui-iconfont">&#xe6df;</i></a> <a style="text-decoration:none" class="ml-5" onClick="o2o_del('','')" href="javascript:;" title="删除"><i class="Hui-iconfont">&#xe6e2;</i></a></td>
+							<i class="Hui-iconfont">&#xe6df;</i>
+						</a> <a style="text-decoration:none" class="ml-5" onClick="o2o_del('<?php echo url('category/status',['id'=>$vo['id'],'status'=>-1]); ?>')" href="javascript:;" title="删除"><i class="Hui-iconfont">&#xe6e2;</i></a></td>
 				</tr>
 				<?php endforeach; endif; else: echo "" ;endif; ?>
 			</tbody>
