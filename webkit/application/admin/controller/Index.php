@@ -7,6 +7,9 @@ class Index extends Controller
     {
      return $this -> fetch();
     }
+    public function map() {
+        return \Map::staticimage('北京昌平沙河地铁');
+    }
     public function welcome()
     {
       \phpmailer\Email::send('978723801@qq.com','email','hello');

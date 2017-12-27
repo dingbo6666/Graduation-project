@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:84:"D:\phpStudy\WWW\my project\webkit\public/../application/bis\view\register\index.html";i:1514195882;s:83:"D:\phpStudy\WWW\my project\webkit\public/../application/bis\view\public\header.html";i:1514106325;s:83:"D:\phpStudy\WWW\my project\webkit\public/../application/bis\view\public\footer.html";i:1484376736;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:84:"D:\phpStudy\WWW\my project\webkit\public/../application/bis\view\register\index.html";i:1514274094;s:83:"D:\phpStudy\WWW\my project\webkit\public/../application/bis\view\public\header.html";i:1514254062;s:83:"D:\phpStudy\WWW\my project\webkit\public/../application/bis\view\public\footer.html";i:1514254146;}*/ ?>
 <!--包含头部文件-->
 <!DOCTYPE HTML>
 <html>
@@ -22,6 +22,7 @@
 <link rel="stylesheet" type="text/css" href="__STATIC__/admin/hui/static/h-ui.admin/skin/default/skin.css" id="skin" />
 <link rel="stylesheet" type="text/css" href="__STATIC__/admin/hui/static/h-ui.admin/css/style.css" />
   <link rel="stylesheet" type="text/css" href="__STATIC__/admin/css/common.css" />
+  <link rel="stylesheet" type="text/css" href="__STATIC__/admin/uploadify/uploadify.css" />
 <!--[if IE 6]>
 <script type="text/javascript" src="http://lib.h-ui.net/DD_belatedPNG_0.0.8a-min.js" ></script>
 <script>DD_belatedPNG.fix('*');</script>
@@ -33,7 +34,7 @@
 
 <div class="cl pd-5 bg-1 bk-gray mt-20"> <h1>商户入驻申请</h1></div>
 <article class="page-container">
-	<form class="form form-horizontal"  method="post" action="">
+	<form class="form form-horizontal"  method="post" action="<?php echo url('register/add'); ?>">
 	基本信息：
 		<div class="row cl">
 			<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>商户名称：</label>
@@ -201,20 +202,22 @@
  var SCOPE = {
    'city_url' : '<?php echo url('api/city/getCitysByParentId'); ?>',
    'category_url' : '<?php echo url('api/category/getCategoryByParentId'); ?>',
-	// 'uploadify_swf' : '__STATIC__/admin/uploadify/uploadify.swf',
-	// 'image_upload' : '<?php echo url('api/image/upload'); ?>',
+	'uploadify_swf' : '__STATIC__/admin/uploadify/uploadify.swf',
+	'image_upload' : '<?php echo url('api/image/upload'); ?>',
  };
 </script>
 <!--包含尾部文件-->
 <script type="text/javascript" src="__STATIC__/admin/hui/lib/jquery/1.9.1/jquery.min.js"></script>
-<script type="text/javascript" src="__STATIC__/admin/hui/lib/layer/2.1/layer.js"></script> 
-<script type="text/javascript" src="__STATIC__/admin/hui/lib/My97DatePicker/WdatePicker.js"></script> 
-<script type="text/javascript" src="__STATIC__/admin/hui/lib/jquery.validation/1.14.0/jquery.validate.min.js"></script> 
+<script type="text/javascript" src="__STATIC__/admin/hui/lib/layer/2.1/layer.js"></script>
+<script type="text/javascript" src="__STATIC__/admin/hui/lib/My97DatePicker/WdatePicker.js"></script>
+<script type="text/javascript" src="__STATIC__/admin/hui/lib/jquery.validation/1.14.0/jquery.validate.min.js"></script>
 <script type="text/javascript" src="__STATIC__/admin/hui/lib/jquery.validation/1.14.0/validate-methods.js"></script>
-<script type="text/javascript" src="__STATIC__/admin/hui/lib/jquery.validation/1.14.0/messages_zh.min.js"></script>  
-<script type="text/javascript" src="__STATIC__/admin/hui/static/h-ui/js/H-ui.js"></script> 
+<script type="text/javascript" src="__STATIC__/admin/hui/lib/jquery.validation/1.14.0/messages_zh.min.js"></script>
+<script type="text/javascript" src="__STATIC__/admin/hui/static/h-ui/js/H-ui.js"></script>
 <script type="text/javascript" src="__STATIC__/admin/hui/static/h-ui.admin/js/H-ui.admin.js"></script>
 <script type="text/javascript" src="__STATIC__/admin/js/common.js"></script>
+<script type="text/javascript" src="__STATIC__/admin/uploadify/jquery.uploadify.min.js"></script>
+<script type="text/javascript" src="__STATIC__/admin/js/image.js"></script>
 
 <script type="text/javascript" src="__STATIC__/admin/hui/lib/ueditor/1.4.3/ueditor.config.js"></script>
 <script type="text/javascript" src="__STATIC__/admin/hui/lib/ueditor/1.4.3/ueditor.all.min.js"> </script>
