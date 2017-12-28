@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:83:"D:\phpStudy\WWW\my project\webkit\public/../application/admin\view\index\index.html";i:1513410940;s:85:"D:\phpStudy\WWW\my project\webkit\public/../application/admin\view\public\header.html";i:1513679852;s:83:"D:\phpStudy\WWW\my project\webkit\public/../application/admin\view\public\menu.html";i:1513477189;s:85:"D:\phpStudy\WWW\my project\webkit\public/../application/admin\view\public\footer.html";i:1513478262;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:83:"D:\phpStudy\WWW\my project\webkit\public/../application/admin\view\index\index.html";i:1513410940;s:85:"D:\phpStudy\WWW\my project\webkit\public/../application/admin\view\public\header.html";i:1513679852;s:83:"D:\phpStudy\WWW\my project\webkit\public/../application/admin\view\public\menu.html";i:1514428564;s:85:"D:\phpStudy\WWW\my project\webkit\public/../application/admin\view\public\footer.html";i:1513478262;}*/ ?>
 ﻿<!--包含头部文件-->
 <!DOCTYPE HTML>
 <html>
@@ -87,7 +87,7 @@
 			<dd>
 				<ul>
 					<li><a _href="" data-title="商家列表" href="javascript:void(0)">商户列表</a></li>
-					<li><a _href="" data-title="商家入驻申请" href="javascript:void(0)">商家入驻申请</a></li>
+					<li><a _href="<?php echo url('bis/apply'); ?>" data-title="商家入驻申请" href="javascript:void(0)">商家入驻申请</a></li>
 					<li><a _href="" data-title="删除的商户" href="javascript:void(0)">删除的商户</a></li>
 				</ul>
 			</dd>
