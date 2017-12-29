@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:81:"D:\phpStudy\WWW\my project\webkit\public/../application/admin\view\bis\apply.html";i:1514525038;s:85:"D:\phpStudy\WWW\my project\webkit\public/../application/admin\view\public\header.html";i:1513679852;s:85:"D:\phpStudy\WWW\my project\webkit\public/../application/admin\view\public\footer.html";i:1513478262;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:81:"D:\phpStudy\WWW\my project\webkit\public/../application/admin\view\bis\index.html";i:1514536091;s:85:"D:\phpStudy\WWW\my project\webkit\public/../application/admin\view\public\header.html";i:1513679852;s:85:"D:\phpStudy\WWW\my project\webkit\public/../application/admin\view\public\footer.html";i:1513478262;}*/ ?>
 <!--包含头部文件-->
 <!DOCTYPE HTML>
 <html>
@@ -57,7 +57,7 @@
 					<td class="text-c"><?php echo $vo['faren']; ?></td>
 					<td class="text-c"><?php echo $vo['faren_tel']; ?></td>
 					<td><?php echo date("Y-m-d H:i",$vo['create_time']); ?></td>
-					<td class="td-status"><a href="<?php echo url('bis/status',['id'=>$vo['id'], 'status'=>1]); ?>" title="点击修改状态"><?php echo status($vo['status']); ?></a></td>
+					<td class="td-status"><?php echo status($vo['status']); ?></td>
 					<td class="td-manage">
 						<a style="text-decoration:none" class="ml-5" onClick="o2o_edit('商户入驻详情数据','<?php echo url('bis/detail', ['id'=>$vo['id']]); ?>')" href="javascript:;" title="编辑">
 							<i class="Hui-iconfont">&#xe6df;</i>

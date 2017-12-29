@@ -7,7 +7,12 @@ class Bis extends  Controller
     public function _initialize() {
         $this->obj = model("Bis");
     }
-
+    public function index() {
+        $bis = $this->obj->getBisByStatus(1);
+        return $this->fetch('', [
+            'bis' => $bis,
+        ]);
+    }
     public function apply() {
         $bis = $this->obj->getBisByStatus();
         return $this->fetch('', [
@@ -35,6 +40,20 @@ class Bis extends  Controller
             'locationData' => $locationData,
             'accountData' => $accountData,
         ]);
+    }
+    public function status() {
+        $data = input('get.');
+
+        $res = $this->obj->save(['status'=>$data['status']], ['id'=>$data['id']]);
+        $location = model('BisLocation')->save(['status'=>$data['status']], ['bis_id'=>$data['id'], 'is_main'=>1]);
+        $account = model('BisAccount')->save(['status'=>$data['status']], ['bis_id'=>$data['id'], 'is_main'=>1]);
+        if($res && $location && $account) {
+            // \phpmailer\Email::send($data['email'],$title, $content);
+            $this->success('状态更新成功');
+        }else {
+            $this->error('状态更新失败');
+        }
+
     }
 
 }

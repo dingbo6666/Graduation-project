@@ -1,0 +1,283 @@
+[ 2017-12-29T16:25:39+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php?s=admin
+[ log ] o2o.ding.com/index.php?s=admin [运行时间：0.577177s][吞吐率：1.73req/s] [内存消耗：1,628.83kb] [文件加载：39]
+[ info ] [ LANG ] D:\phpStudy\WWW\my project\webkit\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'o2o.ding.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.108 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Index->index[ D:\phpStudy\WWW\my project\webkit\application\admin\controller\Index.php ]
+[ info ] [ VIEW ] D:\phpStudy\WWW\my project\webkit\public/../application/admin\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-12-29T16:25:40+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/admin/index/welcome.html
+[ log ] o2o.ding.com/index.php/admin/index/welcome.html [运行时间：0.827726s][吞吐率：1.21req/s] [内存消耗：2,117.59kb] [文件加载：38]
+[ info ] [ LANG ] D:\phpStudy\WWW\my project\webkit\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'welcome',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'o2o.ding.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.108 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://o2o.ding.com/index.php?s=admin',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Index->welcome[ D:\phpStudy\WWW\my project\webkit\application\admin\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-12-29T16:25:42+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/admin/bis/index.html
+[ log ] o2o.ding.com/index.php/admin/bis/index.html [运行时间：1.341242s][吞吐率：0.75req/s] [内存消耗：2,678.16kb] [文件加载：52]
+[ info ] [ LANG ] D:\phpStudy\WWW\my project\webkit\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'bis',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'o2o.ding.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.108 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://o2o.ding.com/index.php?s=admin',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Bis->index[ D:\phpStudy\WWW\my project\webkit\application\admin\controller\Bis.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpStudy\WWW\my project\webkit\public/../application/admin\view\bis\index.html [ array (
+  0 => 'bis',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:1.006893s ] mysql:dbname=my_o2o_table;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `o2o_bis` [ RunTime:0.104137s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `o2o_bis` WHERE  `status` = 1 LIMIT 1 [ RunTime:0.030341s ]
+[ sql ] [ SQL ] SELECT * FROM `o2o_bis` WHERE  `status` = 1 ORDER BY `id`  desc LIMIT 0,15 [ RunTime:0.000893s ]
+
+---------------------------------------------------------------
+[ 2017-12-29T16:28:31+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/admin/bis/index.html
+[ log ] o2o.ding.com/index.php/admin/bis/index.html [运行时间：1.075097s][吞吐率：0.93req/s] [内存消耗：2,680.09kb] [文件加载：52]
+[ info ] [ LANG ] D:\phpStudy\WWW\my project\webkit\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'bis',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'o2o.ding.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.108 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://o2o.ding.com/index.php?s=admin',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Bis->index[ D:\phpStudy\WWW\my project\webkit\application\admin\controller\Bis.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpStudy\WWW\my project\webkit\public/../application/admin\view\bis\index.html [ array (
+  0 => 'bis',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:1.005516s ] mysql:dbname=my_o2o_table;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `o2o_bis` [ RunTime:0.013128s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `o2o_bis` WHERE  `status` = 1 LIMIT 1 [ RunTime:0.001131s ]
+[ sql ] [ SQL ] SELECT * FROM `o2o_bis` WHERE  `status` = 1 ORDER BY `id`  desc LIMIT 0,15 [ RunTime:0.000815s ]
+
+---------------------------------------------------------------
+[ 2017-12-29T16:28:35+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/admin/bis/apply.html
+[ log ] o2o.ding.com/index.php/admin/bis/apply.html [运行时间：1.117134s][吞吐率：0.90req/s] [内存消耗：2,772.61kb] [文件加载：53]
+[ info ] [ LANG ] D:\phpStudy\WWW\my project\webkit\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'bis',
+    2 => 'apply',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'o2o.ding.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.108 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://o2o.ding.com/index.php?s=admin',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Bis->apply[ D:\phpStudy\WWW\my project\webkit\application\admin\controller\Bis.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpStudy\WWW\my project\webkit\public/../application/admin\view\bis\apply.html [ array (
+  0 => 'bis',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:1.024764s ] mysql:dbname=my_o2o_table;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `o2o_bis` [ RunTime:0.012817s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `o2o_bis` WHERE  `status` = 0 LIMIT 1 [ RunTime:0.000792s ]
+[ sql ] [ SQL ] SELECT * FROM `o2o_bis` WHERE  `status` = 0 ORDER BY `id`  desc LIMIT 0,15 [ RunTime:0.000904s ]
+
+---------------------------------------------------------------
+[ 2017-12-29T16:28:38+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/admin/bis/status.html?id=4&status=1
+[ log ] o2o.ding.com/index.php/admin/bis/status.html?id=4&status=1 [运行时间：1.420667s][吞吐率：0.70req/s] [内存消耗：2,539.89kb] [文件加载：52]
+[ info ] [ LANG ] D:\phpStudy\WWW\my project\webkit\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'bis',
+    2 => 'status',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'o2o.ding.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.108 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://o2o.ding.com/index.php/admin/bis/apply.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+)
+[ info ] [ PARAM ] array (
+  'id' => '4',
+  'status' => '1',
+)
+[ info ] [ RUN ] app\admin\controller\Bis->status[ D:\phpStudy\WWW\my project\webkit\application\admin\controller\Bis.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] D:\phpStudy\WWW\my project\webkit\thinkphp\tpl\dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:1.012971s ] mysql:dbname=my_o2o_table;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `o2o_bis` [ RunTime:0.012023s ]
+[ sql ] [ SQL ] UPDATE `o2o_bis`  SET `status`=1,`update_time`=1514536117  WHERE  `id` = 4 [ RunTime:0.045298s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `o2o_bis_location` [ RunTime:0.081076s ]
+[ sql ] [ SQL ] UPDATE `o2o_bis_location`  SET `status`=1,`update_time`=1514536117  WHERE  `bis_id` = 4  AND `is_main` = 1 [ RunTime:0.036986s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `o2o_bis_account` [ RunTime:0.054204s ]
+[ sql ] [ SQL ] UPDATE `o2o_bis_account`  SET `status`=1,`update_time`=1514536117  WHERE  `bis_id` = 4  AND `is_main` = 1 [ RunTime:0.044091s ]
+
+---------------------------------------------------------------
+[ 2017-12-29T16:28:42+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/admin/bis/apply.html
+[ log ] o2o.ding.com/index.php/admin/bis/apply.html [运行时间：1.067923s][吞吐率：0.94req/s] [内存消耗：2,602.27kb] [文件加载：51]
+[ info ] [ LANG ] D:\phpStudy\WWW\my project\webkit\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'bis',
+    2 => 'apply',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'o2o.ding.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.108 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://o2o.ding.com/index.php/admin/bis/status.html?id=4&status=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Bis->apply[ D:\phpStudy\WWW\my project\webkit\application\admin\controller\Bis.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpStudy\WWW\my project\webkit\public/../application/admin\view\bis\apply.html [ array (
+  0 => 'bis',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:1.004900s ] mysql:dbname=my_o2o_table;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `o2o_bis` [ RunTime:0.012685s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `o2o_bis` WHERE  `status` = 0 LIMIT 1 [ RunTime:0.000766s ]
+[ sql ] [ SQL ] SELECT * FROM `o2o_bis` WHERE  `status` = 0 ORDER BY `id`  desc LIMIT 0,15 [ RunTime:0.000896s ]
+
+---------------------------------------------------------------
+[ 2017-12-29T16:28:44+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/admin/bis/index.html
+[ log ] o2o.ding.com/index.php/admin/bis/index.html [运行时间：1.074899s][吞吐率：0.93req/s] [内存消耗：2,592.58kb] [文件加载：51]
+[ info ] [ LANG ] D:\phpStudy\WWW\my project\webkit\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'bis',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'o2o.ding.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.108 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://o2o.ding.com/index.php?s=admin',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Bis->index[ D:\phpStudy\WWW\my project\webkit\application\admin\controller\Bis.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpStudy\WWW\my project\webkit\public/../application/admin\view\bis\index.html [ array (
+  0 => 'bis',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:1.014247s ] mysql:dbname=my_o2o_table;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `o2o_bis` [ RunTime:0.012879s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `o2o_bis` WHERE  `status` = 1 LIMIT 1 [ RunTime:0.000767s ]
+[ sql ] [ SQL ] SELECT * FROM `o2o_bis` WHERE  `status` = 1 ORDER BY `id`  desc LIMIT 0,15 [ RunTime:0.001065s ]
+
+---------------------------------------------------------------
