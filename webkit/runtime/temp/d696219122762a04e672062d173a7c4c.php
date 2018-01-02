@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:81:"D:\phpStudy\WWW\my project\webkit\public/../application/bis\view\index\index.html";i:1514790995;s:83:"D:\phpStudy\WWW\my project\webkit\public/../application/bis\view\public\header.html";i:1514254062;s:81:"D:\phpStudy\WWW\my project\webkit\public/../application/bis\view\public\menu.html";i:1514106429;s:83:"D:\phpStudy\WWW\my project\webkit\public/../application/bis\view\public\footer.html";i:1514254146;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:81:"D:\phpStudy\WWW\my project\webkit\public/../application/bis\view\index\index.html";i:1514790995;s:83:"D:\phpStudy\WWW\my project\webkit\public/../application/bis\view\public\header.html";i:1514254062;s:81:"D:\phpStudy\WWW\my project\webkit\public/../application/bis\view\public\menu.html";i:1514879993;s:83:"D:\phpStudy\WWW\my project\webkit\public/../application/bis\view\public\footer.html";i:1514254146;}*/ ?>
 <!--包含头部文件-->
 <!DOCTYPE HTML>
 <html>
@@ -70,8 +70,8 @@
 			<dt><i class="Hui-iconfont">&#xe616;</i> 店铺管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
 			<dd>
 				<ul>
-				    <li><a _href="" data-title="新增店铺" href="javascript:void(0)">新增店铺</a></li>
-					<li><a _href="" data-title="店铺列表" href="javascript:void(0)">店铺列表</a></li>
+				  <li><a _href="<?php echo url('location/add'); ?>" data-title="新增店铺" href="javascript:void(0)">新增店铺</a></li>
+					<li><a _href="<?php echo url('location/index'); ?>" data-title="店铺列表" href="javascript:void(0)">店铺列表</a></li>
 				</ul>
 			</dd>
 		</dl>
@@ -80,8 +80,8 @@
 			<dt><i class="Hui-iconfont">&#xe620;</i> 商品管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
 			<dd>
 				<ul>
-					<li><a _href="" data-title="商品列表" href="javascript:void(0)">商品列表</a></li>
-					<li><a _href="" data-title="商品添加" href="javascript:void(0)">商品添加</a></li>
+					<li><a _href="<?php echo url('deal/index'); ?>" data-title="商品列表" href="javascript:void(0)">商品列表</a></li>
+					<li><a _href="<?php echo url('deal/add'); ?>" data-title="商品添加" href="javascript:void(0)">商品添加</a></li>
 
 				</ul>
 			</dd>
