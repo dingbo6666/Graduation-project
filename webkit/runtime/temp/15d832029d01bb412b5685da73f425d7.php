@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:83:"D:\phpStudy\WWW\my project\webkit\public/../application/admin\view\index\index.html";i:1513410940;s:85:"D:\phpStudy\WWW\my project\webkit\public/../application/admin\view\public\header.html";i:1513679852;s:83:"D:\phpStudy\WWW\my project\webkit\public/../application/admin\view\public\menu.html";i:1514535839;s:85:"D:\phpStudy\WWW\my project\webkit\public/../application/admin\view\public\footer.html";i:1513478262;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:83:"D:\phpStudy\WWW\my project\webkit\public/../application/admin\view\index\index.html";i:1513410940;s:85:"D:\phpStudy\WWW\my project\webkit\public/../application/admin\view\public\header.html";i:1513679852;s:83:"D:\phpStudy\WWW\my project\webkit\public/../application/admin\view\public\menu.html";i:1515035649;s:85:"D:\phpStudy\WWW\my project\webkit\public/../application/admin\view\public\footer.html";i:1513478262;}*/ ?>
 ﻿<!--包含头部文件-->
 <!DOCTYPE HTML>
 <html>
@@ -93,11 +93,11 @@
 			</dd>
 		</dl>
 		<dl id="menu-product">
-			<dt><i class="Hui-iconfont">&#xe620;</i> 优惠商品管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+			<dt><i class="Hui-iconfont">&#xe620;</i> 商品管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
 			<dd>
 				<ul>
-					<li><a _href="" data-title="优惠商品提交" href="javascript:void(0)">优惠商品提交</a></li>
-					<li><a _href="" data-title="优惠商品列表" href="javascript:void(0)">优惠商品列表</a></li>
+					<li><a _href="" data-title="商品提交" href="javascript:void(0)">商品提交</a></li>
+					<li><a _href="<?php echo url('deal/index'); ?>" data-title="商品列表" href="javascript:void(0)">商品列表</a></li>
 
 				</ul>
 			</dd>
