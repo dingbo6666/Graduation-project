@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:83:"D:\phpStudy\WWW\my project\webkit\public/../application/admin\view\index\index.html";i:1513410940;s:85:"D:\phpStudy\WWW\my project\webkit\public/../application/admin\view\public\header.html";i:1513679852;s:83:"D:\phpStudy\WWW\my project\webkit\public/../application/admin\view\public\menu.html";i:1515035649;s:85:"D:\phpStudy\WWW\my project\webkit\public/../application/admin\view\public\footer.html";i:1513478262;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:83:"D:\phpStudy\WWW\my project\webkit\public/../application/admin\view\index\index.html";i:1513410940;s:85:"D:\phpStudy\WWW\my project\webkit\public/../application/admin\view\public\header.html";i:1515138364;s:83:"D:\phpStudy\WWW\my project\webkit\public/../application/admin\view\public\menu.html";i:1515137831;s:85:"D:\phpStudy\WWW\my project\webkit\public/../application/admin\view\public\footer.html";i:1515138305;}*/ ?>
 ﻿<!--包含头部文件-->
 <!DOCTYPE HTML>
 <html>
@@ -22,6 +22,7 @@
 <link rel="stylesheet" type="text/css" href="__STATIC__/admin/hui/static/h-ui.admin/skin/default/skin.css" id="skin" />
 <link rel="stylesheet" type="text/css" href="__STATIC__/admin/hui/static/h-ui.admin/css/style.css" />
 <link rel="stylesheet" type="text/css" href="__STATIC__/admin/css/common.css" />
+<link rel="stylesheet" type="text/css" href="__STATIC__/admin/uploadify/uploadify.css" />
 <!--[if IE 6]>
 <script type="text/javascript" src="http://lib.h-ui.net/DD_belatedPNG_0.0.8a-min.js" ></script>
 <script>DD_belatedPNG.fix('*');</script>
@@ -106,8 +107,8 @@
 			<dt><i class="Hui-iconfont">&#xe620;</i> 推荐位管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
 			<dd>
 				<ul>
-					<li><a _href="" data-title="添加推荐位内容" href="javascript:void(0)">添加推荐位内容</a></li>
-					<li><a _href="" data-title="推荐位列表" href="javascript:void(0)">推荐位列表</a></li>
+					<li><a _href="<?php echo url('featured/add'); ?>" data-title="添加推荐位内容" href="javascript:void(0)">添加推荐位内容</a></li>
+					<li><a _href="<?php echo url('featured/index'); ?>" data-title="推荐位列表" href="javascript:void(0)">推荐位列表</a></li>
 
 				</ul>
 			</dd>
@@ -163,4 +164,6 @@
 <script type="text/javascript" src="__STATIC__/admin/hui/static/h-ui/js/H-ui.js"></script>
 <script type="text/javascript" src="__STATIC__/admin/hui/static/h-ui.admin/js/H-ui.admin.js"></script>
 <script type="text/javascript" src="__STATIC__/admin/js/common.js"></script>
+<script type="text/javascript" src="__STATIC__/admin/uploadify/jquery.uploadify.min.js"></script>
+<script type="text/javascript" src="__STATIC__/admin/js/image.js"></script>
 

@@ -1,0 +1,459 @@
+[ 2018-01-05T15:42:25+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/bis/register/index.html
+[ log ] o2o.ding.com/index.php/bis/register/index.html [运行时间：1.851022s][吞吐率：0.54req/s] [内存消耗：2,494.96kb] [文件加载：47]
+[ info ] [ LANG ] D:\phpStudy\WWW\my project\webkit\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'bis',
+    1 => 'register',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'o2o.ding.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.108 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\bis\controller\Register->index[ D:\phpStudy\WWW\my project\webkit\application\bis\controller\Register.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpStudy\WWW\my project\webkit\public/../application/bis\view\register\index.html [ array (
+  0 => 'citys',
+  1 => 'categorys',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:1.045306s ] mysql:dbname=my_o2o_table;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `o2o_city` [ RunTime:0.111980s ]
+[ sql ] [ SQL ] SELECT * FROM `o2o_city` WHERE  `status` = 1  AND `parent_id` = 0 ORDER BY `id`  desc [ RunTime:0.023196s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `o2o_category` [ RunTime:0.048221s ]
+[ sql ] [ SQL ] SELECT * FROM `o2o_category` WHERE  `status` = 1  AND `parent_id` = 0 ORDER BY `id`  desc [ RunTime:0.001016s ]
+
+---------------------------------------------------------------
+[ 2018-01-05T15:42:28+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php?s=admin
+[ log ] o2o.ding.com/index.php?s=admin [运行时间：0.155998s][吞吐率：6.41req/s] [内存消耗：1,628.86kb] [文件加载：39]
+[ info ] [ LANG ] D:\phpStudy\WWW\my project\webkit\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'o2o.ding.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.108 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Index->index[ D:\phpStudy\WWW\my project\webkit\application\admin\controller\Index.php ]
+[ info ] [ VIEW ] D:\phpStudy\WWW\my project\webkit\public/../application/admin\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-05T15:42:28+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/bis/register/
+[ log ] o2o.ding.com/index.php/bis/register/ [运行时间：1.088970s][吞吐率：0.92req/s] [内存消耗：2,495.16kb] [文件加载：47]
+[ info ] [ LANG ] D:\phpStudy\WWW\my project\webkit\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'bis',
+    1 => 'register',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'o2o.ding.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.108 Safari/537.36',
+  'x-requested-with' => 'ShockwaveFlash/28.0.0.126',
+  'accept' => '*/*',
+  'referer' => 'http://o2o.ding.com/index.php/bis/register/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\bis\controller\Register->index[ D:\phpStudy\WWW\my project\webkit\application\bis\controller\Register.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpStudy\WWW\my project\webkit\public/../application/bis\view\register\index.html [ array (
+  0 => 'citys',
+  1 => 'categorys',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:1.017107s ] mysql:dbname=my_o2o_table;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `o2o_city` [ RunTime:0.012970s ]
+[ sql ] [ SQL ] SELECT * FROM `o2o_city` WHERE  `status` = 1  AND `parent_id` = 0 ORDER BY `id`  desc [ RunTime:0.000970s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `o2o_category` [ RunTime:0.009514s ]
+[ sql ] [ SQL ] SELECT * FROM `o2o_category` WHERE  `status` = 1  AND `parent_id` = 0 ORDER BY `id`  desc [ RunTime:0.000891s ]
+
+---------------------------------------------------------------
+[ 2018-01-05T15:42:29+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/admin/index/welcome.html
+[ log ] o2o.ding.com/index.php/admin/index/welcome.html [运行时间：0.884425s][吞吐率：1.13req/s] [内存消耗：2,117.59kb] [文件加载：38]
+[ info ] [ LANG ] D:\phpStudy\WWW\my project\webkit\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'welcome',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'o2o.ding.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.108 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://o2o.ding.com/index.php?s=admin',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Index->welcome[ D:\phpStudy\WWW\my project\webkit\application\admin\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-05T15:42:30+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/admin/featured/add.html
+[ log ] o2o.ding.com/index.php/admin/featured/add.html [运行时间：0.039490s][吞吐率：25.32req/s] [内存消耗：1,876.24kb] [文件加载：42]
+[ info ] [ LANG ] D:\phpStudy\WWW\my project\webkit\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'featured',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'o2o.ding.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.108 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://o2o.ding.com/index.php?s=admin',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Featured->add[ D:\phpStudy\WWW\my project\webkit\application\admin\controller\Featured.php ]
+[ info ] [ VIEW ] D:\phpStudy\WWW\my project\webkit\public/../application/admin\view\featured\add.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-05T15:42:31+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/admin/featured/index.html
+[ log ] o2o.ding.com/index.php/admin/featured/index.html [运行时间：0.036715s][吞吐率：27.24req/s] [内存消耗：1,805.84kb] [文件加载：41]
+[ info ] [ LANG ] D:\phpStudy\WWW\my project\webkit\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'featured',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'o2o.ding.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.108 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://o2o.ding.com/index.php?s=admin',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Featured->index[ D:\phpStudy\WWW\my project\webkit\application\admin\controller\Featured.php ]
+[ info ] [ VIEW ] D:\phpStudy\WWW\my project\webkit\public/../application/admin\view\featured\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-05T15:42:32+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/admin/featured/add.html
+[ log ] o2o.ding.com/index.php/admin/featured/add.html [运行时间：0.030708s][吞吐率：32.56req/s] [内存消耗：1,713.65kb] [文件加载：40]
+[ info ] [ LANG ] D:\phpStudy\WWW\my project\webkit\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'featured',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'o2o.ding.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.108 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://o2o.ding.com/index.php?s=admin',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Featured->add[ D:\phpStudy\WWW\my project\webkit\application\admin\controller\Featured.php ]
+[ info ] [ VIEW ] D:\phpStudy\WWW\my project\webkit\public/../application/admin\view\featured\add.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-05T15:46:16+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php?s=admin
+[ log ] o2o.ding.com/index.php?s=admin [运行时间：0.037097s][吞吐率：26.96req/s] [内存消耗：1,629.33kb] [文件加载：39]
+[ info ] [ LANG ] D:\phpStudy\WWW\my project\webkit\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'o2o.ding.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.108 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Index->index[ D:\phpStudy\WWW\my project\webkit\application\admin\controller\Index.php ]
+[ info ] [ VIEW ] D:\phpStudy\WWW\my project\webkit\public/../application/admin\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-05T15:46:17+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/admin/index/welcome.html
+[ log ] o2o.ding.com/index.php/admin/index/welcome.html [运行时间：0.694767s][吞吐率：1.44req/s] [内存消耗：2,117.59kb] [文件加载：38]
+[ info ] [ LANG ] D:\phpStudy\WWW\my project\webkit\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'welcome',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'o2o.ding.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.108 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://o2o.ding.com/index.php?s=admin',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Index->welcome[ D:\phpStudy\WWW\my project\webkit\application\admin\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-05T15:46:20+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/admin/featured/add.html
+[ log ] o2o.ding.com/index.php/admin/featured/add.html [运行时间：0.036290s][吞吐率：27.56req/s] [内存消耗：1,876.63kb] [文件加载：42]
+[ info ] [ LANG ] D:\phpStudy\WWW\my project\webkit\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'featured',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'o2o.ding.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.108 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://o2o.ding.com/index.php?s=admin',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Featured->add[ D:\phpStudy\WWW\my project\webkit\application\admin\controller\Featured.php ]
+[ info ] [ VIEW ] D:\phpStudy\WWW\my project\webkit\public/../application/admin\view\featured\add.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-05T15:46:21+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/admin/featured/
+[ log ] o2o.ding.com/index.php/admin/featured/ [运行时间：0.033285s][吞吐率：30.04req/s] [内存消耗：1,806.04kb] [文件加载：41]
+[ info ] [ LANG ] D:\phpStudy\WWW\my project\webkit\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'featured',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'o2o.ding.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.108 Safari/537.36',
+  'x-requested-with' => 'ShockwaveFlash/28.0.0.126',
+  'accept' => '*/*',
+  'referer' => 'http://o2o.ding.com/index.php/admin/featured/add.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Featured->index[ D:\phpStudy\WWW\my project\webkit\application\admin\controller\Featured.php ]
+[ info ] [ VIEW ] D:\phpStudy\WWW\my project\webkit\public/../application/admin\view\featured\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-05T16:06:05+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php?s=admin
+[ log ] o2o.ding.com/index.php?s=admin [运行时间：0.032462s][吞吐率：30.81req/s] [内存消耗：1,463.44kb] [文件加载：38]
+[ info ] [ LANG ] D:\phpStudy\WWW\my project\webkit\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'o2o.ding.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.108 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Index->index[ D:\phpStudy\WWW\my project\webkit\application\admin\controller\Index.php ]
+[ info ] [ VIEW ] D:\phpStudy\WWW\my project\webkit\public/../application/admin\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-05T16:06:06+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/admin/index/welcome.html
+[ log ] o2o.ding.com/index.php/admin/index/welcome.html [运行时间：0.679108s][吞吐率：1.47req/s] [内存消耗：2,118.55kb] [文件加载：39]
+[ info ] [ LANG ] D:\phpStudy\WWW\my project\webkit\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'welcome',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'o2o.ding.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.108 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://o2o.ding.com/index.php?s=admin',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Index->welcome[ D:\phpStudy\WWW\my project\webkit\application\admin\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-05T16:06:08+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/admin/featured/add.html
+[ log ] o2o.ding.com/index.php/admin/featured/add.html [运行时间：0.035499s][吞吐率：28.17req/s] [内存消耗：1,878.71kb] [文件加载：43]
+[ info ] [ LANG ] D:\phpStudy\WWW\my project\webkit\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'featured',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'o2o.ding.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.108 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://o2o.ding.com/index.php?s=admin',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Featured->add[ D:\phpStudy\WWW\my project\webkit\application\admin\controller\Featured.php ]
+[ info ] [ VIEW ] D:\phpStudy\WWW\my project\webkit\public/../application/admin\view\featured\add.html [ array (
+  0 => 'types',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-05T16:06:09+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/admin/featured/
+[ log ] o2o.ding.com/index.php/admin/featured/ [运行时间：0.030659s][吞吐率：32.62req/s] [内存消耗：1,646.57kb] [文件加载：40]
+[ info ] [ LANG ] D:\phpStudy\WWW\my project\webkit\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'featured',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'o2o.ding.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.108 Safari/537.36',
+  'x-requested-with' => 'ShockwaveFlash/28.0.0.126',
+  'accept' => '*/*',
+  'referer' => 'http://o2o.ding.com/index.php/admin/featured/add.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Featured->index[ D:\phpStudy\WWW\my project\webkit\application\admin\controller\Featured.php ]
+[ info ] [ VIEW ] D:\phpStudy\WWW\my project\webkit\public/../application/admin\view\featured\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
