@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:84:"D:\phpStudy\WWW\my project\webkit\public/../application/admin\view\featured\add.html";i:1515139415;s:85:"D:\phpStudy\WWW\my project\webkit\public/../application/admin\view\public\header.html";i:1515138364;s:85:"D:\phpStudy\WWW\my project\webkit\public/../application/admin\view\public\footer.html";i:1515138305;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:84:"D:\phpStudy\WWW\my project\webkit\public/../application/admin\view\featured\add.html";i:1515139651;s:85:"D:\phpStudy\WWW\my project\webkit\public/../application/admin\view\public\header.html";i:1515138364;s:85:"D:\phpStudy\WWW\my project\webkit\public/../application/admin\view\public\footer.html";i:1515138305;}*/ ?>
 <!--包含头部文件-->
 <!DOCTYPE HTML>
 <html>
@@ -35,7 +35,7 @@
 <body>
 <div class="cl pd-5 bg-1 bk-gray mt-20"> 添加推荐位信息</div>
 <article class="page-container">
-	<form class="form form-horizontal" id="form-article-add" method="post" action="">
+	<form class="form form-horizontal" id="form-article-add" method="post" action="<?php echo url('featured/add'); ?>">
 		<div class="row cl">
 			<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>标题：</label>
 			<div class="formControls col-xs-8 col-sm-3">

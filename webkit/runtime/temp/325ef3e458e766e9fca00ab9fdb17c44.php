@@ -1,5 +1,5 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:86:"D:\phpStudy\WWW\my project\webkit\public/../application/admin\view\featured\index.html";i:1515120784;s:85:"D:\phpStudy\WWW\my project\webkit\public/../application/admin\view\public\header.html";i:1515138364;s:85:"D:\phpStudy\WWW\my project\webkit\public/../application/admin\view\public\footer.html";i:1515138305;}*/ ?>
-<!--包含头部文件--> 
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:86:"D:\phpStudy\WWW\my project\webkit\public/../application/admin\view\featured\index.html";i:1515224925;s:85:"D:\phpStudy\WWW\my project\webkit\public/../application/admin\view\public\header.html";i:1515138364;s:85:"D:\phpStudy\WWW\my project\webkit\public/../application/admin\view\public\footer.html";i:1515138305;}*/ ?>
+<!--包含头部文件-->
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -36,13 +36,13 @@
 <nav class="breadcrumb"></nav>
 <div class="page-container">
   <div class="text-c">
-  <form method="get" action="">
+  <form method="get" action="<?php echo url('featured/index'); ?>">
       <label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>选择推荐类别：</label>
       <div class="formControls col-xs-8 col-sm-3"> <span class="select-box">
         <select name="type" class="select">
-
-          <option value="" ></option>
-
+          <?php if(is_array($types) || $types instanceof \think\Collection): $i = 0; $__LIST__ = $types;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
+					<option value="<?php echo $key; ?>"><?php echo $vo; ?></option>
+					<?php endforeach; endif; else: echo "" ;endif; ?>
         </select>
         </span>
       </div>
@@ -64,19 +64,20 @@
         </tr>
       </thead>
       <tbody>
-
+        <?php if(is_array($results) || $results instanceof \think\Collection): $i = 0; $__LIST__ = $results;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
         <tr class="text-c">
-          <td></td>
-          <td><a href="" target="_blank"></a></td>
-          <td class="text-c"></td>
-          <td></td>
-          <td class="td-status"><a href="" title="点击修改状态"></a></td>
-          <td class="td-manage"> <a style="text-decoration:none" class="ml-5" onClick="" href="javascript:;" title="删除"><i class="Hui-iconfont">&#xe6e2;</i></a></td>
+          <td><?php echo $vo['id']; ?></td>
+          <td><a href="<?php echo $vo['url']; ?>" target="_blank"><?php echo $vo['title']; ?></a></td>
+          <td class="text-c"><?php echo $vo['url']; ?></td>
+          <td><?php echo date("y-m-d H:i", $vo['create_time']); ?></td>
+          <td class="td-status"><a href="<?php echo url('featured/status',['id'=>$vo['id'], 'status'=>$vo['status']==1?0:1]); ?>" title="点击修改状态"><?php echo status($vo['status']); ?></a></td>
+          <td class="td-manage"> <a style="text-decoration:none" class="ml-5" onClick="o2o_del('<?php echo url('featured/status', ['id'=>$vo['id'], 'status'=>-1]); ?>')" href="javascript:;" title="删除"><i class="Hui-iconfont">&#xe6e2;</i></a></td>
         </tr>
-
+        <?php endforeach; endif; else: echo "" ;endif; ?>
       </tbody>
     </table>
   </div>
+  <?php echo pagination($results); ?>
 </div>
 <!--包含头部文件-->
 <script type="text/javascript" src="__STATIC__/admin/hui/lib/jquery/1.9.1/jquery.min.js"></script>

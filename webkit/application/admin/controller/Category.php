@@ -1,7 +1,7 @@
 <?php
 namespace app\admin\controller;
 use think\Controller;
-class Category extends Controller
+class Category extends Base
 {
   private $obj;
   public function _initialize(){
@@ -67,17 +67,17 @@ class Category extends Controller
         $this->result($_SERVER['HTTP_REFERER'],0,'更新失败');
       }
     }
-    public function status() {
-        $data = input('get.');
-        $validate = validate('Category');
-        if(!$validate->scene('status')->check($data)) {
-            $this->error($validate->getError());
-        }
-      $res = $this->obj->save(['status'=>$data['status']], ['id'=>$data['id']]);
-      if($res) {
-          $this->success('状态更新成功');
-      }else {
-          $this->error('状态更新失败');
-      }
-    }
+    // public function status() {
+    //     $data = input('get.');
+    //     $validate = validate('Category');
+    //     if(!$validate->scene('status')->check($data)) {
+    //         $this->error($validate->getError());
+    //     }
+    //   $res = $this->obj->save(['status'=>$data['status']], ['id'=>$data['id']]);
+    //   if($res) {
+    //       $this->success('状态更新成功');
+    //   }else {
+    //       $this->error('状态更新失败');
+    //   }
+    // }
 }
