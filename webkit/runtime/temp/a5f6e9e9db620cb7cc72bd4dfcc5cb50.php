@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:83:"D:\phpStudy\WWW\my project\webkit\public/../application/index\view\index\index.html";i:1513330589;s:83:"D:\phpStudy\WWW\my project\webkit\public/../application/index\view\public\head.html";i:1513391380;s:82:"D:\phpStudy\WWW\my project\webkit\public/../application/index\view\public\nav.html";i:1513330454;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:83:"D:\phpStudy\WWW\my project\webkit\public/../application/index\view\index\index.html";i:1513330589;s:83:"D:\phpStudy\WWW\my project\webkit\public/../application/index\view\public\head.html";i:1515400655;s:82:"D:\phpStudy\WWW\my project\webkit\public/../application/index\view\public\nav.html";i:1513330454;}*/ ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -19,22 +19,29 @@
     <div class="header-bar">
         <div class="header-inner">
             <ul class="father">
-                <li><a>盘锦</a></li>
+                <li><a><?php echo $city['name']; ?></a></li>
                 <li>|</li>
                 <li class="city">
                     <a>切换城市<span class="arrow-down-logo"></span></a>
                     <div class="city-drop-down">
                         <h3>城市</h3>
                         <ul class="son">
-                            <li><a href="">大连</a></li>
-                            <li><a href="">盘锦</a></li>
+                          <?php if(is_array($citys) || $citys instanceof \think\Collection): $i = 0; $__LIST__ = $citys;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
+                          <li><a href="<?php echo url('index/index', ['city'=>$vo['uname']]); ?>"><?php echo $vo['name']; ?></a></li>
+                          <?php endforeach; endif; else: echo "" ;endif; ?>
                         </ul>
 
                     </div>
                 </li>
-                <li><a href="register.html">注册</a></li>
+                <?php if($user): ?>
+                <li>欢迎您：<?php echo $user->username; ?></li>
+                <li><a href="<?php echo url('user/logout'); ?>">退出</a></li>
+                <?php else: ?>
+                <li><a href="<?php echo url('user/register'); ?>">注册</a></li>
                 <li>|</li>
-                <li><a href="login.html">登录</a></li>
+                <li><a href="<?php echo url('user/login'); ?>">登录</a></li>
+                <?php endif; ?>
+                <li><a href="<?php echo url('bis/login/index'); ?>">商户中心</a></li>
             </ul>
         </div>
     </div>

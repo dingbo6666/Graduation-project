@@ -17,22 +17,29 @@
     <div class="header-bar">
         <div class="header-inner">
             <ul class="father">
-                <li><a>盘锦</a></li>
+                <li><a>{$city.name}</a></li>
                 <li>|</li>
                 <li class="city">
                     <a>切换城市<span class="arrow-down-logo"></span></a>
                     <div class="city-drop-down">
                         <h3>城市</h3>
                         <ul class="son">
-                            <li><a href="">大连</a></li>
-                            <li><a href="">盘锦</a></li>
+                          {volist name="citys" id="vo"}
+                          <li><a href="{:url('index/index', ['city'=>$vo['uname']])}">{$vo.name}</a></li>
+                          {/volist}
                         </ul>
 
                     </div>
                 </li>
-                <li><a href="register.html">注册</a></li>
+                {if condition="$user"}
+                <li>欢迎您：{$user->username}</li>
+                <li><a href="{:url('user/logout')}">退出</a></li>
+                {else /}
+                <li><a href="{:url('user/register')}">注册</a></li>
                 <li>|</li>
-                <li><a href="login.html">登录</a></li>
+                <li><a href="{:url('user/login')}">登录</a></li>
+                {/if}
+                <li><a href="{:url('bis/login/index')}">商户中心</a></li>
             </ul>
         </div>
     </div>

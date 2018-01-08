@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:82:"D:\phpStudy\WWW\my project\webkit\public/../application/index\view\user\login.html";i:1513392401;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:82:"D:\phpStudy\WWW\my project\webkit\public/../application/index\view\user\login.html";i:1515393539;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,7 +22,7 @@
             </ul>
             <div class="login-link">
                 <span>还没本网站帐号？</span>
-                <a href="register.html">注册</a>
+                <a href="<?php echo url('user/register'); ?>">注册</a>
             </div>
         </div>
 
@@ -32,12 +32,12 @@
                 <div class="login-area">
                     <div class="title">登录</div>
                     <div class="login">
-                        <form>
+                        <form action="<?php echo url('user/logincheck'); ?>" method="post">
                             <div class="ordinaryLogin">
 
                                 <p class="pass-form-item">
                                     <label class="pass-label">用户名</label>
-                                    <input type="text" name="userName" class="pass-text-input" placeholder="用户名">
+                                    <input type="text" name="username" class="pass-text-input" placeholder="用户名">
                                 </p>
                                 <p class="pass-form-item">
                                     <label class="pass-label">密码</label>
