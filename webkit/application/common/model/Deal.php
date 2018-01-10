@@ -11,7 +11,27 @@ class Deal extends BaseModel
 
     $result = $this->where($data)
       ->order($order)
-      ->paginate(1);
+      ->paginate();
     return  $result;
+  }
+  public function getNormalDealByCategoryCityId($id, $cityId, $limit=10) {
+    $data  = [
+      'end_time' => ['gt', time()],
+      'category_id' => $id,
+      'city_id' => $cityId,
+      'status' => 1,
+    ];
+
+    $order = [
+      'listorder'=>'desc',
+      'id'=>'desc',
+    ];
+
+    $result = $this->where($data)
+      ->order($order);
+    if($limit) {
+      $result = $result->limit($limit);
+    }
+    return $result->select();
   }
 }

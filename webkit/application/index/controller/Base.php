@@ -11,8 +11,10 @@ class Base extends Controller
         $citys = model('City')->getNormalCitys();
         //用户数据
         $this->getCity($citys);
+        $cats = $this->getRecommendCats();
         $this->assign('citys', $citys);
         $this->assign('city', $this->city);
+        $this->assign('cats', $cats);
         $this->assign('user', $this->getLoginUser());
     }
 
@@ -40,6 +42,27 @@ class Base extends Controller
             $this->account = session('o2o_user', '', 'o2o');
         }
         return $this->account;
+    }
+    public function getRecommendCats() {
+        $parentIds = $sedcatArr = $recomCats = [];
+        $cats = model('Category')->getNormalRecommendCategoryByParentId(0,5);
+        foreach($cats as $cat) {
+            $parentIds[] = $cat->id;
+        }
+        // 获取二级分类的数据
+        $sedCats = model('Category')->getNormalCategoryIdParentId($parentIds);
+        foreach($sedCats as $sedcat) {
+            $sedcatArr[$sedcat->parent_id][] = [
+                'id' => $sedcat->id,
+                'name' => $sedcat->name,
+            ];
+        }
+
+        foreach($cats as $cat) {
+            // recomCats代表是一级和二级数据，[]第一个参数是一级分类的name, 第二个参数是此一级分类下面的所有二级分类数据
+            $recomCats[$cat->id] = [$cat->name, empty($sedcatArr[$cat->id]) ? [] : $sedcatArr[$cat->id]];
+        }
+        return $recomCats;
     }
 
 }

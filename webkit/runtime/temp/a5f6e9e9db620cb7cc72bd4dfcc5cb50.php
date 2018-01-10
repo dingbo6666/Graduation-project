@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:83:"D:\phpStudy\WWW\my project\webkit\public/../application/index\view\index\index.html";i:1513330589;s:83:"D:\phpStudy\WWW\my project\webkit\public/../application/index\view\public\head.html";i:1515400655;s:82:"D:\phpStudy\WWW\my project\webkit\public/../application/index\view\public\nav.html";i:1513330454;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:83:"D:\phpStudy\WWW\my project\webkit\public/../application/index\view\index\index.html";i:1515569307;s:83:"D:\phpStudy\WWW\my project\webkit\public/../application/index\view\public\head.html";i:1515400789;s:82:"D:\phpStudy\WWW\my project\webkit\public/../application/index\view\public\nav.html";i:1515553822;}*/ ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -56,12 +56,14 @@
             <li class="nav-item">
                 <span class="item">全部分类</span>
                 <div class="left-menu">
+                  <?php if(is_array($cats) || $cats instanceof \think\Collection): $i = 0; $__LIST__ = $cats;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$cat): $mod = ($i % 2 );++$i;?>
                     <div class="level-item">
                         <div class="first-level">
                             <dl>
-                                <dt class="title"><a href="" target="_top">种类1</a></dt>
-                                <dd><a href="" target="_top" class="">商品1</a></dd>
-                                <dd><a href="" target="_top" class="">商品2</a></dd>
+                                <dt class="title"><a href="<?php echo url('lists/index', ['id'=>$key]); ?>" target="_top"><?php echo $cat[0]; ?></a></dt>
+                                <?php if(is_array($cat[1]) || $cat[1] instanceof \think\Collection): $i = 0;$__LIST__ = is_array($cat[1]) ? array_slice($cat[1],0,2, true) : $cat[1]->slice(0,2, true); if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
+                                <dd><a href="<?php echo url('lists/index', ['id'=>$vo['id']]); ?>" target="_top" class=""><?php echo $vo['name']; ?></a></dd>
+                                <?php endforeach; endif; else: echo "" ;endif; ?>
                             </dl>
                         </div>
                         <div class="second-level">
@@ -69,306 +71,16 @@
                                 <div class="section-item clearfix no-top-border">
                                     <h3>热销商品</h3>
                                     <ul>
-                                        <li><a class="hot">精选商品</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                    </ul>
-                                </div>
-                                <div class="section-item clearfix">
-                                    <h3>热销商品</h3>
-                                    <ul>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
+                                      <?php if(is_array($cat[1]) || $cat[1] instanceof \think\Collection): $i = 0; $__LIST__ = $cat[1];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
+                                      <li> <a target="_blank" href="<?php echo url('lists/index', ['id'=>$vo['id']]); ?>"><?php echo $vo['name']; ?></a></li>
+                                      <?php endforeach; endif; else: echo "" ;endif; ?>
                                     </ul>
                                 </div>
 
                             </div>
                         </div>
                     </div>
-                    <div class="level-item">
-                        <div class="first-level">
-                            <dl>
-                                <dt class="title"><a href="" target="_top">种类2</a></dt>
-                                <dd><a href="" target="_top" class="">商品1</a></dd>
-                                <dd><a href="" target="_top" class="">商品2</a></dd>
-                            </dl>
-                        </div>
-                        <div class="second-level">
-                            <div class="section">
-                                <div class="section-item clearfix no-top-border">
-                                    <h3>热销商品</h3>
-                                    <ul>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                    </ul>
-                                </div>
-                                <div class="section-item clearfix">
-                                    <h3>热销商品</h3>
-                                    <ul>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                    </ul>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="level-item">
-                        <div class="first-level">
-                            <dl>
-                                <dt class="title"><a href="" target="_top">种类3</a></dt>
-                                <dd><a href="" target="_top" class="">商品1</a></dd>
-                                <dd><a href="" target="_top" class="">商品2</a></dd>
-                            </dl>
-                        </div>
-                        <div class="second-level">
-                            <div class="section">
-                                <div class="section-item clearfix no-top-border">
-                                  <h3>热销商品</h3>
-                                    <ul>
-                                        <li><a class="hot">精选商品</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                    </ul>
-                                </div>
-                                <div class="section-item clearfix">
-                                  <h3>热销商品</h3>
-                                    <ul>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                    </ul>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="level-item">
-                        <div class="first-level">
-                            <dl>
-                                <dt class="title"><a href="" target="_top">种类4</a></dt>
-                                <dd><a href="" target="_top" class="">商品1</a></dd>
-                                <dd><a href="" target="_top" class="">商品2</a></dd>
-                            </dl>
-                        </div>
-                        <div class="second-level">
-                            <div class="section">
-                                <div class="section-item clearfix no-top-border">
-                                    <h3>热销商品</h3>
-                                    <ul>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                    </ul>
-                                </div>
-                                <div class="section-item clearfix">
-                                    <h3>热销商品</h3>
-                                    <ul>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                    </ul>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="level-item">
-                        <div class="first-level">
-                            <dl>
-                                <dt class="title"><a href="" target="_top">种类5</a></dt>
-                                <dd><a href="" target="_top" class="">商品1</a></dd>
-                                <dd><a href="" target="_top" class="">商品2</a></dd>
-                            </dl>
-                        </div>
-                        <div class="second-level">
-                            <div class="section">
-                                <div class="section-item clearfix no-top-border">
-                                    <h3>热销商品</h3>
-                                    <ul>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                    </ul>
-                                </div>
-                                <div class="section-item clearfix">
-                                    <h3>热销商品</h3>
-                                    <ul>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                        <li><a>精选品牌</a></li>
-                                    </ul>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
+                    <?php endforeach; endif; else: echo "" ;endif; ?>
                 </div>
             </li>
             <li class="nav-item"><a class="item first active">首页</a></li>
@@ -408,16 +120,16 @@
 
                     <div class="floor-content">
                         <div class="floor-header">
-                            <h3>商品</h3>
+                            <h3>商品推荐</h3>
                             <ul class="reco-words">
-                                <li><a href="" target="_blank">精选品牌</a></li>
-                                <li><a href="" target="_blank">精选品牌</a></li>
-                                <li><a href="" target="_blank">精选品牌</a></li>
-                                <li><a href="" target="_blank">精选品牌</a></li>
-                                <li><a class="no-right-border no-right-padding" target="_blank">全部<span class="all-cate-arrow"></span></a></li>
+                                <?php if(is_array($assortment) || $assortment instanceof \think\Collection): $i = 0; $__LIST__ = $assortment;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
+                                <li><a href="<?php echo url('lists/index', ['id'=>$vo['id']]); ?>" target="_blank"><?php echo $vo['name']; ?></a></li>
+                                <?php endforeach; endif; else: echo "" ;endif; ?>
+                                <li><a class="no-right-border no-right-padding" target="_blank" href="<?php echo url('lists/index', ['id'=>1]); ?>">全部<span class="all-cate-arrow"></span></a></li>
                             </ul>
                         </div>
                         <ul class="itemlist eight-row-height">
+                          <?php if($datas): if(is_array($datas) || $datas instanceof \think\Collection): $i = 0; $__LIST__ = $datas;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
                             <li class="j-card">
                                 <a>
                                     <div class="imgbox">
@@ -427,375 +139,34 @@
                                         <div class="range-area">
                                             <div class="range-bg"></div>
                                             <div class="range-inner">
-                                                <span class="white-locate"></span>
-                                                盘锦
                                             </div>
                                         </div>
                                         <div class="borderbox">
-                                            <img src="" />
+                                            <img src="<?php echo $vo['image']; ?>" />
                                         </div>
                                     </div>
                                 </a>
                                 <div class="contentbox">
-                                    <a href=" " target="_blank">
+                                    <a href="<?php echo url('detail/index', ['id'=>$vo['id']]); ?>" target="_blank">
                                         <div class="header">
-                                            <h4 class="title ">商品1</h4>
+                                            <h4 class="title ">【<?php echo countLocation($vo['location_ids']); ?>店通用】</h4>
                                         </div>
-                                        <p>商品介绍</p>
+                                        <p><?php echo $vo['name']; ?></p>
                                     </a>
                                     <div class="add-info"></div>
                                     <div class="pinfo">
-                                        <span class="price"><span class="moneyico">¥</span>99</span>
-                                        <span class="ori-price">价值<span class="price-line">¥<span>66</span></span></span>
+                                        <span class="price"><span class="moneyico">¥</span><?php echo $vo['current_price']; ?></span>
+                                        <span class="ori-price">价值<span class="price-line">¥<span><?php echo $vo['origin_price']; ?></span></span></span>
                                     </div>
                                     <div class="footer">
-                                        <span class="comment">5.0分</span><span class="sold">已售99</span>
+                                        <span class="comment">10.0分</span><span class="sold">已售<?php echo $vo['buy_count']; ?></span>
                                         <div class="bottom-border"></div>
                                     </div>
                                 </div>
                             </li>
-                            <li class="j-card">
-                                <a>
-                                    <div class="imgbox">
-                                        <ul class="marketing-label-container">
-                                            <li class="marketing-label marketing-free-appoint"></li>
-                                        </ul>
-                                        <div class="range-area">
-                                            <div class="range-bg"></div>
-                                            <div class="range-inner">
-                                                <span class="white-locate"></span>
-                                                大连
-                                            </div>
-                                        </div>
-                                        <div class="borderbox">
-                                            <img src=" " />
-                                        </div>
-                                    </div>
-                                </a>
-                                <div class="contentbox">
-                                    <a href=" " target="_blank">
-                                        <div class="header">
-                                            <h4 class="title ">商品2</h4>
-                                        </div>
-                                        <p>商品介绍</p>
-                                    </a>
-                                    <div class="add-info">
-                                        <span class="promo">立减10元</span>
-                                    </div>
-                                    <div class="pinfo">
-                                        <span class="price"><span class="moneyico">¥</span>100</span>
-                                        <span class="ori-price">价值<span class="price-line">¥<span>50</span></span></span>
-                                    </div>
-                                    <div class="footer">
-                                        <span class="comment">4.9分</span><span class="sold">已售30</span>
-                                        <div class="bottom-border"></div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="j-card">
-                                <a>
-                                    <div class="imgbox">
-                                        <ul class="marketing-label-container">
-                                            <li class="marketing-label marketing-free-appoint"></li>
-                                        </ul>
-                                        <div class="range-area">
-                                            <div class="range-bg"></div>
-                                            <div class="range-inner">
-                                                <span class="white-locate"></span>
-                                                大连
-                                            </div>
-                                        </div>
-                                        <div class="borderbox">
-                                            <img src=" " />
-                                        </div>
-                                    </div>
-                                </a>
-                                <div class="contentbox">
-                                    <a href=" " target="_blank">
-                                        <div class="header">
-                                            <h4 class="title ">商品2</h4>
-                                        </div>
-                                        <p>商品介绍</p>
-                                    </a>
-                                    <div class="add-info">
-                                        <span class="promo">立减10元</span>
-                                    </div>
-                                    <div class="pinfo">
-                                        <span class="price"><span class="moneyico">¥</span>100</span>
-                                        <span class="ori-price">价值<span class="price-line">¥<span>50</span></span></span>
-                                    </div>
-                                    <div class="footer">
-                                        <span class="comment">4.9分</span><span class="sold">已售30</span>
-                                        <div class="bottom-border"></div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="j-card">
-                                <a>
-                                    <div class="imgbox">
-                                        <ul class="marketing-label-container">
-                                            <li class="marketing-label marketing-free-appoint"></li>
-                                        </ul>
-                                        <div class="range-area">
-                                            <div class="range-bg"></div>
-                                            <div class="range-inner">
-                                                <span class="white-locate"></span>
-                                                大连
-                                            </div>
-                                        </div>
-                                        <div class="borderbox">
-                                            <img src=" " />
-                                        </div>
-                                    </div>
-                                </a>
-                                <div class="contentbox">
-                                    <a href=" " target="_blank">
-                                        <div class="header">
-                                            <h4 class="title ">商品2</h4>
-                                        </div>
-                                        <p>商品介绍</p>
-                                    </a>
-                                    <div class="add-info">
-                                        <span class="promo">立减10元</span>
-                                    </div>
-                                    <div class="pinfo">
-                                        <span class="price"><span class="moneyico">¥</span>100</span>
-                                        <span class="ori-price">价值<span class="price-line">¥<span>50</span></span></span>
-                                    </div>
-                                    <div class="footer">
-                                        <span class="comment">4.9分</span><span class="sold">已售30</span>
-                                        <div class="bottom-border"></div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="j-card">
-                                <a>
-                                    <div class="imgbox">
-                                        <ul class="marketing-label-container">
-                                            <li class="marketing-label marketing-free-appoint"></li>
-                                        </ul>
-                                        <div class="range-area">
-                                            <div class="range-bg"></div>
-                                            <div class="range-inner">
-                                                <span class="white-locate"></span>
-                                                大连
-                                            </div>
-                                        </div>
-                                        <div class="borderbox">
-                                            <img src=" " />
-                                        </div>
-                                    </div>
-                                </a>
-                                <div class="contentbox">
-                                    <a href=" " target="_blank">
-                                        <div class="header">
-                                            <h4 class="title ">商品2</h4>
-                                        </div>
-                                        <p>商品介绍</p>
-                                    </a>
-                                    <div class="add-info">
-                                        <span class="promo">立减10元</span>
-                                    </div>
-                                    <div class="pinfo">
-                                        <span class="price"><span class="moneyico">¥</span>100</span>
-                                        <span class="ori-price">价值<span class="price-line">¥<span>50</span></span></span>
-                                    </div>
-                                    <div class="footer">
-                                        <span class="comment">4.9分</span><span class="sold">已售30</span>
-                                        <div class="bottom-border"></div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="j-card">
-                                <a>
-                                    <div class="imgbox">
-                                        <ul class="marketing-label-container">
-                                            <li class="marketing-label marketing-free-appoint"></li>
-                                        </ul>
-                                        <div class="range-area">
-                                            <div class="range-bg"></div>
-                                            <div class="range-inner">
-                                                <span class="white-locate"></span>
-                                                大连
-                                            </div>
-                                        </div>
-                                        <div class="borderbox">
-                                            <img src=" " />
-                                        </div>
-                                    </div>
-                                </a>
-                                <div class="contentbox">
-                                    <a href=" " target="_blank">
-                                        <div class="header">
-                                            <h4 class="title ">商品2</h4>
-                                        </div>
-                                        <p>商品介绍</p>
-                                    </a>
-                                    <div class="add-info">
-                                        <span class="promo">立减10元</span>
-                                    </div>
-                                    <div class="pinfo">
-                                        <span class="price"><span class="moneyico">¥</span>100</span>
-                                        <span class="ori-price">价值<span class="price-line">¥<span>50</span></span></span>
-                                    </div>
-                                    <div class="footer">
-                                        <span class="comment">4.9分</span><span class="sold">已售30</span>
-                                        <div class="bottom-border"></div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="j-card">
-                                <a>
-                                    <div class="imgbox">
-                                        <ul class="marketing-label-container">
-                                            <li class="marketing-label marketing-free-appoint"></li>
-                                        </ul>
-                                        <div class="range-area">
-                                            <div class="range-bg"></div>
-                                            <div class="range-inner">
-                                                <span class="white-locate"></span>
-                                                大连
-                                            </div>
-                                        </div>
-                                        <div class="borderbox">
-                                            <img src=" " />
-                                        </div>
-                                    </div>
-                                </a>
-                                <div class="contentbox">
-                                    <a href=" " target="_blank">
-                                        <div class="header">
-                                            <h4 class="title ">商品2</h4>
-                                        </div>
-                                        <p>商品介绍</p>
-                                    </a>
-                                    <div class="add-info">
-                                        <span class="promo">立减10元</span>
-                                    </div>
-                                    <div class="pinfo">
-                                        <span class="price"><span class="moneyico">¥</span>100</span>
-                                        <span class="ori-price">价值<span class="price-line">¥<span>50</span></span></span>
-                                    </div>
-                                    <div class="footer">
-                                        <span class="comment">4.9分</span><span class="sold">已售30</span>
-                                        <div class="bottom-border"></div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="j-card">
-                                <a>
-                                    <div class="imgbox">
-                                        <ul class="marketing-label-container">
-                                            <li class="marketing-label marketing-free-appoint"></li>
-                                        </ul>
-                                        <div class="range-area">
-                                            <div class="range-bg"></div>
-                                            <div class="range-inner">
-                                                <span class="white-locate"></span>
-                                                大连
-                                            </div>
-                                        </div>
-                                        <div class="borderbox">
-                                            <img src=" " />
-                                        </div>
-                                    </div>
-                                </a>
-                                <div class="contentbox">
-                                    <a href=" " target="_blank">
-                                        <div class="header">
-                                            <h4 class="title ">商品2</h4>
-                                        </div>
-                                        <p>商品介绍</p>
-                                    </a>
-                                    <div class="add-info">
-                                        <span class="promo">立减10元</span>
-                                    </div>
-                                    <div class="pinfo">
-                                        <span class="price"><span class="moneyico">¥</span>100</span>
-                                        <span class="ori-price">价值<span class="price-line">¥<span>50</span></span></span>
-                                    </div>
-                                    <div class="footer">
-                                        <span class="comment">4.9分</span><span class="sold">已售30</span>
-                                        <div class="bottom-border"></div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="j-card">
-                                <a>
-                                    <div class="imgbox">
-                                        <ul class="marketing-label-container">
-                                            <li class="marketing-label marketing-free-appoint"></li>
-                                        </ul>
-                                        <div class="range-area">
-                                            <div class="range-bg"></div>
-                                            <div class="range-inner">
-                                                <span class="white-locate"></span>
-                                                大连
-                                            </div>
-                                        </div>
-                                        <div class="borderbox">
-                                            <img src=" " />
-                                        </div>
-                                    </div>
-                                </a>
-                                <div class="contentbox">
-                                    <a href=" " target="_blank">
-                                        <div class="header">
-                                            <h4 class="title ">商品2</h4>
-                                        </div>
-                                        <p>商品介绍</p>
-                                    </a>
-                                    <div class="add-info">
-                                        <span class="promo">立减10元</span>
-                                    </div>
-                                    <div class="pinfo">
-                                        <span class="price"><span class="moneyico">¥</span>100</span>
-                                        <span class="ori-price">价值<span class="price-line">¥<span>50</span></span></span>
-                                    </div>
-                                    <div class="footer">
-                                        <span class="comment">4.9分</span><span class="sold">已售30</span>
-                                        <div class="bottom-border"></div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="j-card">
-                                <a>
-                                    <div class="imgbox">
-                                        <ul class="marketing-label-container">
-                                            <li class="marketing-label marketing-free-appoint"></li>
-                                        </ul>
-                                        <div class="range-area">
-                                            <div class="range-bg"></div>
-                                            <div class="range-inner">
-                                                <span class="white-locate"></span>
-                                                大连
-                                            </div>
-                                        </div>
-                                        <div class="borderbox">
-                                            <img src=" " />
-                                        </div>
-                                    </div>
-                                </a>
-                                <div class="contentbox">
-                                    <a href=" " target="_blank">
-                                        <div class="header">
-                                            <h4 class="title ">商品2</h4>
-                                        </div>
-                                        <p>商品介绍</p>
-                                    </a>
-                                    <div class="add-info">
-                                        <span class="promo">立减10元</span>
-                                    </div>
-                                    <div class="pinfo">
-                                        <span class="price"><span class="moneyico">¥</span>100</span>
-                                        <span class="ori-price">价值<span class="price-line">¥<span>50</span></span></span>
-                                    </div>
-                                    <div class="footer">
-                                        <span class="comment">4.9分</span><span class="sold">已售30</span>
-                                        <div class="bottom-border"></div>
-                                    </div>
-                                </div>
-                            </li>
+                            <?php endforeach; endif; else: echo "" ;endif; else: ?>
+                                <span style="color:red;font-size:24px;">该城市下没有此分类数据 </span>
+                            <?php endif; ?>
                         </ul>
                     </div>
                 </div>
