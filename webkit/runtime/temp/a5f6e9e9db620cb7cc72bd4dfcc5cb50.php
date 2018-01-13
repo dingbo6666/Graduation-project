@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:83:"D:\phpStudy\WWW\my project\webkit\public/../application/index\view\index\index.html";i:1515569307;s:83:"D:\phpStudy\WWW\my project\webkit\public/../application/index\view\public\head.html";i:1515400789;s:82:"D:\phpStudy\WWW\my project\webkit\public/../application/index\view\public\nav.html";i:1515553822;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:83:"D:\phpStudy\WWW\my project\webkit\public/../application/index\view\index\index.html";i:1515569387;s:83:"D:\phpStudy\WWW\my project\webkit\public/../application/index\view\public\head.html";i:1515642971;s:82:"D:\phpStudy\WWW\my project\webkit\public/../application/index\view\public\nav.html";i:1515553822;}*/ ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -6,11 +6,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="x-ua-compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>首页</title>
+    <title><?php echo $title; ?></title>
     <link rel="shortcut icon" href="">
     <link rel="stylesheet" href="/static/index/css/base.css" />
     <link rel="stylesheet" href="/static/index/css/common.css" />
-    <link rel="stylesheet" href="/static/index/css/index.css" />
+    <link rel="stylesheet" href="/static/index/css/<?php echo $controler; ?>.css" />
     <script type="text/javascript" src="/static/index/js/html5shiv.js"></script>
     <script type="text/javascript" src="/static/index/js/respond.min.js"></script>
     <script type="text/javascript" src="/static/index/js/jquery-1.11.3.min.js"></script>

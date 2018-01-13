@@ -12,6 +12,7 @@ class Index extends Base
         return $this->fetch('',[
             'datas' => $datas,
             'assortment' => $assortment,
+            'controller' => 'xx',
         ]);
     }
 }

@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:84:"D:\phpStudy\WWW\my project\webkit\public/../application/bis\view\location\index.html";i:1514879438;s:83:"D:\phpStudy\WWW\my project\webkit\public/../application/bis\view\public\header.html";i:1514254062;s:83:"D:\phpStudy\WWW\my project\webkit\public/../application/bis\view\public\footer.html";i:1514254146;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:84:"D:\phpStudy\WWW\my project\webkit\public/../application/bis\view\location\index.html";i:1514879686;s:83:"D:\phpStudy\WWW\my project\webkit\public/../application/bis\view\public\header.html";i:1514254062;s:83:"D:\phpStudy\WWW\my project\webkit\public/../application/bis\view\public\footer.html";i:1514254146;}*/ ?>
 <!--包含头部文件-->
 <!DOCTYPE HTML>
 <html>
@@ -55,7 +55,7 @@
 					<td><?php echo date("Y-m-d H:i",$vo['create_time']); ?></td>
 					<td class="td-status"><?php echo status($vo['status']); ?></td>
 					<td class="td-manage">
-						<a style="text-decoration:none" class="ml-5" onClick="o2o_edit('商户入驻详情数据','<?php echo url('bis/detail', ['id'=>$vo['id']]); ?>')" href="javascript:;" title="查看"><i class="Hui-iconfont">&#xe6df;</i></a> 
+						<a style="text-decoration:none" class="ml-5" onClick="" href="javascript:;" title="查看"><i class="Hui-iconfont">&#xe6df;</i></a> 
 						<a style="text-decoration:none" class="ml-5" onClick="" href="javascript:;" title="下架"><i class="Hui-iconfont">&#xe6e2;</i></a></td>
 				</tr>
 				<?php endforeach; endif; else: echo "" ;endif; ?>

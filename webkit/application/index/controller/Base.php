@@ -15,7 +15,9 @@ class Base extends Controller
         $this->assign('citys', $citys);
         $this->assign('city', $this->city);
         $this->assign('cats', $cats);
+        $this->assign('controler', strtolower(request()->controller()));
         $this->assign('user', $this->getLoginUser());
+        $this->assign('title', '美妆商城');
     }
 
     public function getCity($citys) {
